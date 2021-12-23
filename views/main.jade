@@ -1,0 +1,133 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    title main
+    link(rel="stylesheet", href="/static/stylesheets/main.css")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  body
+    div.top_bar 
+      div.first
+        span logo 
+      div.second   
+        button(onclick="toggel_nav()") x
+        
+    div(class="nav-bar")
+      div
+        .new_message(id="new_message" onclick="show_suitable_layout(0)") new message
+        .sended_message(id="sended_message" onclick="show_suitable_layout(1)")  send message
+        .recived_message(id="recived_message" onclick="show_suitable_layout(2)")  recived message
+        .corby(id="corby" onclick="show_suitable_layout(3)") corby
+        
+            
+    div.profile
+      div
+        span #{fname} #{lname} #[img(src="#{pic_profile_path}" width="100" hieght="100"  alt="")]
+        select(id="change_status",onclick="change_status()")
+          option(value="on") status on 
+            img(src="", alt="")
+          option(value="off") status off
+            img(src="", alt="")
+    div.setting
+      form(action="/json/deconnect" method="get") 
+        button deconnect
+      form(action="/update") 
+        button update info
+    div.messages
+      div.main(style="width:100%;height:420px;border:1px solid red;")
+        .new_message_area(id="new_message_layout")
+          h2 send new message
+          div
+            div
+              h3 object
+              label(for="") send to
+              select(name="receiver" ,onclick="get_all_user()" id="choose_use")
+                option(value="-1") choose
+            br
+            input(type="text" name="_object" id="_object").message_object
+            br
+            br
+            textarea( cols="60", rows="10",style="width:94%" , name="_message" id="_message").message_content
+            br
+            br
+            label choose file
+            input(type="file" name="_file" id="_file").message_file
+            br
+            br
+            input(type="submit" , value="send" , onclick="send_my_message()")
+            br
+            div#erro_msg 
+
+        .sended_message_area(style="display:none;" id="sended_message_layout")
+          h2 sended message
+          // sended message table
+          table
+            thead(border)
+              tr
+                th 
+                th reciver
+                th object
+                th message 
+                th file 
+                th show 
+
+            tbody#message_list_sended
+        .recived_message_area(style="display:none;" id="recived_message_layout")
+          h2 recived message
+          // sended message table
+          table
+            thead(border) 
+              tr
+                th  
+                th sender
+                th object
+                th message 
+                th file 
+                th show 
+
+            tbody#message_list_recived
+        .corby_area(style="display:none;" id="corby_message_layout")
+          h2 corby message
+          // sended message table
+          table
+            thead(border) 
+              tr
+                th  
+                th sender/reciver
+                th object
+                th message 
+                th file 
+                th show 
+            tbody#message_list_corby
+        .display_message_area(style="display:none;" id="display_message_layout")
+          div   
+            span sender :
+            span#sender_info
+            br
+            span reciver : 
+            span#reciver_info
+          div 
+            |object :
+            span#object_info
+          div 
+            |message:
+            br
+            p#message_info
+          div 
+            |file:
+            span#file_info
+          br
+          div 
+            button#to_corby to corby
+  br
+  br
+  #sho gg
+  script(src="/static/javascripts/main.js")
+  script(src="/static/javascripts/main_responsive.js")
+
+  
+
+

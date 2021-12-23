@@ -1,0 +1,143 @@
+@media (max-width: 767px) {
+  .container_sing_up {
+    display: none;
+  }
+  body {
+    background-color: rgba(77, 72, 72, 0.808);
+  }
+  /*for log in */
+  .container_log_in,
+  .container_sing_up {
+    height: calc(100vh - 40px);
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .container_sing_up {
+    display: none;
+  }
+  .log_in,
+  .sing_up {
+    margin: 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 15px;
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+  }
+  .log_in h2,
+  .sing_up h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .log_in div form input,
+  .sing_up div form input {
+    border-radius: 2px;
+    border: 1px solid rgb(0, 153, 255);
+    height: 30px;
+    width: 100%;
+  }
+  .log_in div form div,
+  .sing_up div form div {
+    height: 22px;
+    color: rgb(148, 51, 51);
+  }
+  .log_in div form button,
+  .sing_up div form button {
+    border-radius: 8px;
+    border: 1px solid rgb(0, 153, 255);
+    height: 30px;
+    width: 100%;
+    color: white;
+  }
+  .log_in div button,
+  .sing_up div button {
+    border-radius: 8px;
+    border: 1px solid rgb(132, 134, 133);
+    height: 30px;
+    width: 100%;
+    color: green;
+  }
+  .toggel_button:active {
+    color: whitesmoke;
+  }
+  /* for sing up*/
+}
+
+/*muidem computer*/
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    height: 100vh;
+    min-height: 500px;
+    justify-content:space-around;
+    align-items: center;
+  }
+  .container_log_in,.container_sing_up {
+    display: block;
+    border: 1px solid black;
+    height: 540px;
+    width: 44%;
+    padding-bottom: 0;
+    padding:25px;
+    padding-bottom: 0px;
+  }
+  .container_log_in{
+    width: 40%;
+    height: 265px;
+    padding:7px;
+   padding-bottom: 0px;
+  }
+  .log_in,
+  .sing_up {
+  /*  text-align: center;*/
+    border: 1px solid red;
+    margin-bottom: 0;
+  }
+
+  .toggel_button{
+    display: none;
+  }
+  .log_in div form ,
+  .sing_up div form {
+    border: 1px solid green;
+    width: 70%;
+    margin-left: 15%;
+    padding: 10px;
+  }
+  .log_in div form input,
+  .sing_up div form input {
+    border-radius: 6px;
+    border: 1px solid rgb(0, 153, 255);
+    height: 25px;
+    width: 100%;
+  }
+  .log_in div form label,
+  .sing_up div form label{
+    text-align: left;
+    font-size:larger;
+  }
+  .log_in h2,
+  .sing_up h2 {
+    text-align: center;
+    font-size: 30px;
+  }
+  .log_in div form button,
+  .sing_up div form button {
+    margin-left: 80%;
+    border-radius:15px;
+    border: 1px solid rgb(132, 134, 133);
+    height: 30px;
+    width: 80px;
+    color: green;
+    cursor: pointer;
+  }
+
+}
+
+@media (min-width: 992px) {
+}
+@media (min-width: 1200px) {
+}

@@ -1,0 +1,75 @@
+doctype html
+
+html(lang='en')
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    title index
+    link(rel="stylesheet", href="/static/stylesheets/style.css")
+    
+  body
+    div(class="container_log_in")
+      div.log_in(class="log_in")
+        h2 Log In
+        div
+          form(action="/validate_login" method="post")
+            label(for="") Email
+            br
+            input(type="email"  name="email")
+            br
+            br
+            label(for="")  Password
+            br
+            input(type="password" name="password") 
+            br
+            br
+            div #{login_error}
+            br
+            button logi in
+          br
+          button(class="toggel_button" ,onclick="toggel(1)") sing up
+            
+    div(class="container_sing_up")
+      div.sing_up(style="" class="sing_up")
+        h2 Sing up
+        div
+          form(action="/validate_singup" method="post" enctype="multipart/form-data" )
+            label(for="") first name
+            br
+            input(type="text" name="fname" id="fname" )
+            br
+            br
+            label(for="")  last name
+            br
+            input(type="text" name="lname" id="lname") 
+            br
+            br
+            label(for="")  email
+            br
+            input(type="text" name="email" id="email" autocomplete="off") 
+            br
+            br
+            label(for="")  password
+            br
+            input(type="password" name="password" id="password" autocomplete="new-password") 
+            br
+            br
+            label(for="")  re-password
+            br
+            input(type="password" name="repassword" id="repassword")
+            br
+            br
+            label(for="")  picture
+            br
+            input(type="file" name="picture_file") 
+            br
+            br
+            div(id="err_msg") #{singup_error} 
+            br
+            button(onclick="set_Local_Storage()") registered
+          br
+          button(class="toggel_button" ,onclick="toggel(2)") log in
+          
+            
+  script(src="/static/javascripts/index.js")

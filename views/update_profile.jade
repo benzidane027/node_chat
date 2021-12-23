@@ -1,0 +1,50 @@
+doctype html
+
+html(lang='en')
+  head
+    meta(charset="utf-8")
+    title update profile
+  body
+  div 
+    form(action="/main" ) 
+      button return
+    div
+      form(action="/update/apply_uptate_info" method="post")
+          label(for="") first name
+          br
+          input(type="text" name="fname" value="#{fname}")
+          br
+          label(for="")  last name
+          br
+          input(type="text" name="lname" value="#{lname}") 
+          br
+          label(for="")  email
+          br
+          input(type="email" name="email" value="#{email}") 
+          br
+          label(for="") current password
+          br
+          input(type="password" name="c_password" ) 
+          br
+          br
+          button update
+          div #{error_on_update}
+    br
+    br
+    div     
+        form(action="/update/apply_password_change" method="post") 
+            label(for="") new password
+            br
+            input(type="password" name="n_password" ) 
+            br
+            label(for="") re-new password
+            br
+            input(type="password" name="ren_password" ) 
+            br
+            label(for="") current password
+            br
+            input(type="password" name="c_password" ) 
+            br
+            br
+            button update
+            div #{error_on_change}

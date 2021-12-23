@@ -1,0 +1,7 @@
+//this for git accept push from ubunto
+git remote set-url origin https://amibenz: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@github.com/amibenz/nodejs_chat.git
+//this for mysql accept connection
+sudo apt install mysql-server
+sudo mysql_secure_installation
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '@mine1997Amine';
+flush privileges;

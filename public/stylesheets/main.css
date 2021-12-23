@@ -1,0 +1,71 @@
+@media (max-width: 767px) {
+  body{
+    height: 5000px;
+  }
+  .top_bar{
+    display: block;
+    background-color: brown;
+    height: 25px;
+    display: flex;
+  }
+    .top_bar div{
+      width: 50%;
+    }
+    .second{
+      text-align: end;
+    }
+    .second button{
+      width: 30px;
+      height: 100%;
+      border: 1px solid black;
+    }
+  
+  .nav-bar{
+    padding: 0px;
+    margin-top: 25px;
+    margin-bottom: 28px;
+    display: none;
+  }
+  .nav-bar div{
+    display: flex;
+    justify-content:center;
+    flex-direction: column;
+    height: 25px;
+    
+    align-items: center;
+  }
+  .nav-bar div div{
+    width: 100%;
+    background-color: aqua;
+  }
+
+  }
+  /*muidem computer*/
+  @media (min-width: 768px) {
+    body{
+      background-color: brown;
+    }
+    .top_bar{
+      display: none;
+    }
+    .nav-bar{
+      padding: 10px;
+      
+    }
+    .nav-bar div{
+      display: flex;
+      justify-content: space-evenly;
+      height: 25px;
+      
+      align-items: center;
+    }
+    .nav-bar div div{
+      width: 20%;
+      background-color: aqua;
+    }
+  }
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+  
